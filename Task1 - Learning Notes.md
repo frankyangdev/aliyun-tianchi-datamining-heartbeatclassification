@@ -1,4 +1,4 @@
-## Notebook: 
+# Notebook: 
 
 Understanding: [T1 - Understanding.ipynb](https://github.com/frankyangdev/aliyun-tianchi-datamining-heartbeatclassification/blob/main/T1%20-%20Understanding.ipynb)
 
@@ -28,7 +28,7 @@ Run baseline:
 
 
 
-## One-Hot Encoding
+# One-Hot Encoding
 https://blog.csdn.net/qq_43428310/article/details/106684521?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242
 
 https://blog.csdn.net/Li_yi_chao/article/details/80852701?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-0&spm=1001.2101.3001.4242
