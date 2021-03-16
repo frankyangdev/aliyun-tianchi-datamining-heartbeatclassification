@@ -1,7 +1,17 @@
 
-Notebook: 
+##Notebook: 
 
 Understanding: [T1 - Understanding.ipynb](https://github.com/frankyangdev/aliyun-tianchi-datamining-heartbeatclassification/blob/main/T1%20-%20Understanding.ipynb)
+
+#混淆矩阵（Confuse Matrix）
+
+（1）若一个实例是正类，并且被预测为正类，即为真正类TP(True Positive )
+（2）若一个实例是正类，但是被预测为负类，即为假负类FN(False Negative )
+（3）若一个实例是负类，但是被预测为正类，即为假正类FP(False Positive )
+（4）若一个实例是负类，并且被预测为负类，即为真负类TN(True Negative ）
+
+
+#精确率(Precision)是针对预测结果而言的，其含义是在被所有预测为正的样本中实际为正样本的概率在被所有预测为正的样本中实际为正样本的概率，精确率和准确率看上去有些类似，但是是两个完全不同的概念。精确率代表对正样本结果中的预测准确程度，准确率则代表整体的预测准确程度，包括正样本和负样本。
 
 Baseline : [T1 - HeartbeatClassification.ipynb](https://github.com/frankyangdev/aliyun-tianchi-datamining-heartbeatclassification/blob/main/T1%20-%20HeartbeatClassification.ipynb)
 
