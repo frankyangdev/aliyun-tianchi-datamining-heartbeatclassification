@@ -54,6 +54,11 @@ import pandas as pd
 
 ![image](https://user-images.githubusercontent.com/39177230/111590648-55c12c00-8801-11eb-914a-13fa3e1cf34c.png)
 
+#### [Skew()](https://pythontic.com/pandas/dataframe-computations/skew) function in Pandas. Skewness is a measure of asymmetry(不对称) of a distribution. Another measure that describes the shape of a distribution is kurtosis.
+
+#### [Kurt()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.kurt.html) Return unbiased kurtosis over requested axis.
+
+
 ![image](https://user-images.githubusercontent.com/39177230/111590700-6bceec80-8801-11eb-8b0c-539b0b2aaa34.png)
 
 ![image](https://user-images.githubusercontent.com/39177230/111590792-899c5180-8801-11eb-89a2-ea9dbdc1de9b.png)
