@@ -1,3 +1,5 @@
+#### Notebook [T2 - EDA.ipynb](https://github.com/frankyangdev/aliyun-tianchi-datamining-heartbeatclassification/blob/main/T2%20-%20EDA.ipynb)
+
 #### import package:
 
 #coding:utf-8
