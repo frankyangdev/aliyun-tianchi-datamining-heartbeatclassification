@@ -36,6 +36,10 @@ import pandas as pd
 #### df.isnull().sum() check sum of null value
 ![image](https://user-images.githubusercontent.com/39177230/111589528-eb5bbc00-87ff-11eb-8168-c29083e07eb6.png)
 
+#### df.count() check each count of column
+![image](https://user-images.githubusercontent.com/39177230/111589842-59a07e80-8800-11eb-90b0-577790eb49b9.png)
+
+
 
 
 
