@@ -67,6 +67,8 @@ import pandas as pd
 
 ![image](https://user-images.githubusercontent.com/39177230/111590938-b6e8ff80-8801-11eb-8406-8b741c53813b.png)
 
+#### [Profiling report](https://github.com/frankyangdev/aliyun-tianchi-datamining-heartbeatclassification/blob/main/T2%20-%20Train%20data%20profiling%20example.html)
+
 ![image](https://user-images.githubusercontent.com/39177230/111591050-e1d35380-8801-11eb-89c4-56fe49309c0b.png)
 
 
