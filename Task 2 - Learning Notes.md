@@ -6,12 +6,14 @@ import warnings
 warnings.filterwarnings('ignore')
 
 [import missingno as msno](https://libraries.io/pypi/missingno)
+
 [import matplotlib.pyplot as plt](https://matplotlib.org/2.0.2/api/pyplot_api.html)
+
 [import seaborn as sns](https://seaborn.pydata.org/introduction.html)
 
 
 
-#### extend column size to view more value in same column
+#### pd.options.display.max_colwidth = 250 extend column size to view more value in same column, change the value according to your column length
 import pandas as pd
 
 ![image](https://user-images.githubusercontent.com/39177230/111588106-13e2b680-87fe-11eb-88d0-fbc4d1da9567.png)
