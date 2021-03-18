@@ -40,6 +40,37 @@ import pandas as pd
 ![image](https://user-images.githubusercontent.com/39177230/111589842-59a07e80-8800-11eb-90b0-577790eb49b9.png)
 
 
+#### df['label'] display value of column label
+![image](https://user-images.githubusercontent.com/39177230/111590166-bdc34280-8800-11eb-9ec7-1a21ce53001d.png)
+
+#### df['label'].value_counts()  count group by different value
+![image](https://user-images.githubusercontent.com/39177230/111590344-f3682b80-8800-11eb-93a5-51f4462f81f6.png)
+
+![image](https://user-images.githubusercontent.com/39177230/111590530-2ca09b80-8801-11eb-91c9-0d6c754c7642.png)
+
+![image](https://user-images.githubusercontent.com/39177230/111590621-4cd05a80-8801-11eb-8ebe-f3c9d46307a8.png)
+
+![image](https://user-images.githubusercontent.com/39177230/111590648-55c12c00-8801-11eb-914a-13fa3e1cf34c.png)
+
+![image](https://user-images.githubusercontent.com/39177230/111590700-6bceec80-8801-11eb-8b0c-539b0b2aaa34.png)
+
+![image](https://user-images.githubusercontent.com/39177230/111590792-899c5180-8801-11eb-89a2-ea9dbdc1de9b.png)
+
+![image](https://user-images.githubusercontent.com/39177230/111590832-9456e680-8801-11eb-8fc7-6fa6443e4b94.png)
+
+![image](https://user-images.githubusercontent.com/39177230/111590938-b6e8ff80-8801-11eb-8406-8b741c53813b.png)
+
+![image](https://user-images.githubusercontent.com/39177230/111591050-e1d35380-8801-11eb-89c4-56fe49309c0b.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
