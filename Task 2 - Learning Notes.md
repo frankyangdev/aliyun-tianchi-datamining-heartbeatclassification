@@ -1,3 +1,6 @@
+##### 查看当前kernel下已安装的包  list packages
+!pip list --format=columns
+
 #### Notebook [T2 - EDA.ipynb](https://github.com/frankyangdev/aliyun-tianchi-datamining-heartbeatclassification/blob/main/T2%20-%20EDA.ipynb)
 
 #### import package:
@@ -70,22 +73,5 @@ import pandas as pd
 #### [Profiling report](https://github.com/frankyangdev/aliyun-tianchi-datamining-heartbeatclassification/blob/main/T2%20-%20Train%20data%20profiling%20example.html)
 
 ![image](https://user-images.githubusercontent.com/39177230/111591050-e1d35380-8801-11eb-89c4-56fe49309c0b.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
