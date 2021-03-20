@@ -28,11 +28,18 @@ Returns
 DataFrame or None
 DataFrame with the new index or None if inplace=True.
 
-* After reset_index()
+* After reset_index() 
+
 ![image](https://user-images.githubusercontent.com/39177230/111866554-4a106980-89a9-11eb-92d1-44b0fd5f55b1.png)
 
-* After set_index()
+* After set_index() 
+
 ![image](https://user-images.githubusercontent.com/39177230/111866590-8217ac80-89a9-11eb-9851-6f1a4f396539.png)
+
+* Rename index column name to null and other column names to time and signals, chagne column signal type to float
+![image](https://user-images.githubusercontent.com/39177230/111866779-dc653d00-89aa-11eb-914b-8388000feadf.png)
+
+ 
 
 
 
