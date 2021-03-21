@@ -62,7 +62,7 @@ Alternative to specifying axis (labels, axis=1 is equivalent to columns=labels).
 
 #### [tsfresh quick start](https://tsfresh.readthedocs.io/en/latest/text/quick_start.html)
 
-### Code sample [Multiclass Selection Example.ipynb](https://github.com/frankyangdev/tsfresh/blob/main/notebooks/examples/04%20Multiclass%20Selection%20Example.ipynb)
+#### Code sample [Multiclass Selection Example.ipynb](https://github.com/frankyangdev/tsfresh/blob/main/notebooks/examples/04%20Multiclass%20Selection%20Example.ipynb)
 
 ![image](https://user-images.githubusercontent.com/39177230/111891082-c5662f80-8a2a-11eb-9b1c-011b03394315.png)
 
