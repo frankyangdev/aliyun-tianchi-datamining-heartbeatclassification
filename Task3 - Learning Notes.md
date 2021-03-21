@@ -1,3 +1,5 @@
+#### Completed Notebook [T3 - Features Engineering.ipynb](https://github.com/frankyangdev/aliyun-tianchi-datamining-heartbeatclassification/blob/main/T3%20-%20Features%20Engineering.ipynb)
+
 #### [pandas.DataFrame.stack](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.stack.html)
 
 DataFrame.stack(level=- 1, dropna=True)
