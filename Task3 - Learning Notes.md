@@ -87,6 +87,11 @@ Processing Unit: GPU - 1 x NVIDIA Tesla K80
 #### select_features()
 ![image](https://user-images.githubusercontent.com/39177230/111891472-58549900-8a2e-11eb-9812-68657ac5e899.png)
 
+Total 707 features are selected
+
+![image](https://user-images.githubusercontent.com/39177230/111892428-63132c00-8a36-11eb-9fe0-1f96ab31b259.png)
+
+
 
 
 
