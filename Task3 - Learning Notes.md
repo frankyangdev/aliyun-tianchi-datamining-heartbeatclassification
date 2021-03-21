@@ -60,6 +60,28 @@ Alternative to specifying axis (labels, axis=0 is equivalent to index=labels).
 columnssingle label or list-like
 Alternative to specifying axis (labels, axis=1 is equivalent to columns=labels).
 
+#### [tsfresh quick start](https://tsfresh.readthedocs.io/en/latest/text/quick_start.html)
+
+### Code sample [Multiclass Selection Example.ipynb](https://github.com/frankyangdev/tsfresh/blob/main/notebooks/examples/04%20Multiclass%20Selection%20Example.ipynb)
+
+![image](https://user-images.githubusercontent.com/39177230/111891082-c5662f80-8a2a-11eb-9b1c-011b03394315.png)
+
+#### extract_features()
+
+#### impute()
+
+#### select_features()
+
+#### [Benjamini Yekutieli procedure](https://en.wikipedia.org/wiki/False_discovery_rate#Benjamini%E2%80%93Yekutieli_procedure)
+
+![image](https://user-images.githubusercontent.com/39177230/111891167-baf86580-8a2b-11eb-86d6-d871ba454a95.png)
+
+
+
+
+
+
+
 
 
 
