@@ -68,7 +68,7 @@ Alternative to specifying axis (labels, axis=1 is equivalent to columns=labels).
 
 #### extract_features()
 
-#### impute()
+#### impute() remove NaN value from extracted features
 
 #### select_features()
 
