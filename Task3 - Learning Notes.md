@@ -62,19 +62,24 @@ Alternative to specifying axis (labels, axis=1 is equivalent to columns=labels).
 
 #### [tsfresh quick start](https://tsfresh.readthedocs.io/en/latest/text/quick_start.html)
 
+#### [Benjamini Yekutieli procedure](https://en.wikipedia.org/wiki/False_discovery_rate#Benjamini%E2%80%93Yekutieli_procedure)
+
+![image](https://user-images.githubusercontent.com/39177230/111891167-baf86580-8a2b-11eb-86d6-d871ba454a95.png)
+
+
 #### Code sample [Multiclass Selection Example.ipynb](https://github.com/frankyangdev/tsfresh/blob/main/notebooks/examples/04%20Multiclass%20Selection%20Example.ipynb)
 
 ![image](https://user-images.githubusercontent.com/39177230/111891082-c5662f80-8a2a-11eb-9b1c-011b03394315.png)
 
 #### extract_features()
+![image](https://user-images.githubusercontent.com/39177230/111891397-ca78ae00-8a2d-11eb-8f08-6a9f07c1ae38.png)
 
 #### impute() remove NaN value from extracted features
+![image](https://user-images.githubusercontent.com/39177230/111891439-3529e980-8a2e-11eb-82ad-eb2e7f3fc35b.png)
+
 
 #### select_features()
-
-#### [Benjamini Yekutieli procedure](https://en.wikipedia.org/wiki/False_discovery_rate#Benjamini%E2%80%93Yekutieli_procedure)
-
-![image](https://user-images.githubusercontent.com/39177230/111891167-baf86580-8a2b-11eb-86d6-d871ba454a95.png)
+![image](https://user-images.githubusercontent.com/39177230/111891472-58549900-8a2e-11eb-9812-68657ac5e899.png)
 
 
 
