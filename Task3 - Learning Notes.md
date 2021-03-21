@@ -36,8 +36,32 @@ DataFrame with the new index or None if inplace=True.
 
 ![image](https://user-images.githubusercontent.com/39177230/111866590-8217ac80-89a9-11eb-9851-6f1a4f396539.png)
 
+
 * Rename index column name to null and other column names to time and signals, chagne column signal type to float
 ![image](https://user-images.githubusercontent.com/39177230/111866779-dc653d00-89aa-11eb-914b-8388000feadf.png)
+
+
+#### [pandas.DataFrame.drop](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.drop.html)
+
+Drop specified labels from rows or columns.
+
+Remove rows or columns by specifying label names and corresponding axis, or by specifying directly index or column names. When using a multi-index, labels on different levels can be removed by specifying the level.
+
+Parameters
+labelssingle label or list-like
+Index or column labels to drop.
+
+axis{0 or ‘index’, 1 or ‘columns’}, default 0
+Whether to drop labels from the index (0 or ‘index’) or columns (1 or ‘columns’).
+
+indexsingle label or list-like
+Alternative to specifying axis (labels, axis=0 is equivalent to index=labels).
+
+columnssingle label or list-like
+Alternative to specifying axis (labels, axis=1 is equivalent to columns=labels).
+
+
+
 
  
 
