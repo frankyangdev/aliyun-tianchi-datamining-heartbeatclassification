@@ -74,6 +74,10 @@ Alternative to specifying axis (labels, axis=1 is equivalent to columns=labels).
 ![image](https://user-images.githubusercontent.com/39177230/111891082-c5662f80-8a2a-11eb-9b1c-011b03394315.png)
 
 #### extract_features()
+Change to Azure MLStudion Compute 
+Virtual machine size: STANDARD_NC6 (6 Cores, 56 GB RAM, 380 GB Disk) 
+Processing Unit: GPU - 1 x NVIDIA Tesla K80
+
 ![image](https://user-images.githubusercontent.com/39177230/111891397-ca78ae00-8a2d-11eb-8f08-6a9f07c1ae38.png)
 
 #### impute() remove NaN value from extracted features
