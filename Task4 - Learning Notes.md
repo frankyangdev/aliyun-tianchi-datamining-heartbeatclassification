@@ -1,3 +1,15 @@
+### [参考代码学习](https://github.com/frankyangdev/Machine-Learning)
+
+#### Decision Tree[code](https://github.com/Jack-Cherish/Machine-Learning/tree/master/Decision%20Tree)
+
+#### Logistic [code](https://github.com/Jack-Cherish/Machine-Learning/tree/master/Logistic)
+
+#### LightGBM [code](https://github.com/microsoft/LightGBM)
+
+#### catboost [code](https://github.com/catboost/catboost)
+
+
+
 ### [逻辑回归模型](https://blog.csdn.net/han_xiaoyang/article/details/49123419)
 
 它将数据拟合到一个logit函数(或者叫做logistic函数)中，从而能够完成对事件发生的概率进行预测。
