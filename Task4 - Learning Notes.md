@@ -4,7 +4,7 @@
 
 #### Logistic [code](https://github.com/Jack-Cherish/Machine-Learning/tree/master/Logistic)
 
-#### LightGBM [code](https://github.com/microsoft/LightGBM)
+#### LightGBM [code](https://github.com/microsoft/LightGBM) [onSpark](https://github.com/Azure/mmlspark/blob/master/notebooks/samples/LightGBM%20-%20Quantile%20Regression%20for%20Drug%20Discovery.ipynb)
 
 #### catboost [code](https://github.com/catboost/catboost)
 
