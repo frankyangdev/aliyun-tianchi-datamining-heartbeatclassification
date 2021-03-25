@@ -10,7 +10,7 @@
 所谓的代价函数Cost Function，其实是一种衡量我们在这组参数下预估的结果和实际结果差距的函数，比如说线性回归的代价函数定义为:
 ![image](https://user-images.githubusercontent.com/39177230/112442759-26716880-8d87-11eb-83b5-1e036532cbf9.png)
 
-[code]
+```python
 from numpy import loadtxt, where
 from pylab import scatter, show, legend, xlabel, ylabel
  
@@ -29,6 +29,8 @@ ylabel('Feature2/Exam 2 score')
 legend(['Fail', 'Pass'])
 show()
 [/code]
+
+```
 
 
 ### 决策树模型
