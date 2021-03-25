@@ -1,6 +1,6 @@
 ### [参考代码学习](https://github.com/frankyangdev/Machine-Learning)
 
-#### Decision Tree[code](https://github.com/Jack-Cherish/Machine-Learning/tree/master/Decision%20Tree)
+#### Decision Tree [code](https://github.com/Jack-Cherish/Machine-Learning/tree/master/Decision%20Tree)
 
 #### Logistic [code](https://github.com/Jack-Cherish/Machine-Learning/tree/master/Logistic)
 
