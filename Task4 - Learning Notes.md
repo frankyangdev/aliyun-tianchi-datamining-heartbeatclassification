@@ -68,6 +68,7 @@ def compute_grad(theta, X, y):
 ```
 
 梯度下降算法得到的结果判定边界是如下的样子:
+
 ![image](https://user-images.githubusercontent.com/39177230/112444153-b7950f00-8d88-11eb-9089-d9f8f89886cd.png)
 
 使用我们的判定边界对training data做一个预测，然后比对一下准确率：
