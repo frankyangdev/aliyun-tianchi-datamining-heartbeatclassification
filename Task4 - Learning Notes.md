@@ -33,24 +33,7 @@ show()
 ```
 ![image](https://user-images.githubusercontent.com/39177230/112443647-2b82e780-8d88-11eb-9201-e85bf4c0d7da.png)
 
-判定边界对training data做一个预测，然后比对一下准确率
-```python
-def predict(theta, X):
-    '''Predict label using learned logistic regression parameters'''
-    m, n = X.shape
-    p = zeros(shape=(m,1))
-    h = sigmoid(X.dot(theta.T))
-    for it in range(0, h.shape[0]):
-        if h[it]>0.5:
-            p[it,0]=1
-        else:
-            p[it,0]=0
-    return p
-#Compute accuracy on our training set
-p = predict(array(theta), it)
-print'Train Accuracy: %f'%((y[where(p == y)].size / float(y.size))*100.0)
 
-```
 写好计算sigmoid函数、代价函数、和梯度下降的程序
 ```python
  
@@ -85,6 +68,10 @@ def compute_grad(theta, X, y):
 
 梯度下降算法得到的结果判定边界是如下的样子:
 ![image](https://user-images.githubusercontent.com/39177230/112444153-b7950f00-8d88-11eb-9089-d9f8f89886cd.png)
+
+使用我们的判定边界对training data做一个预测，然后比对一下准确率：
+计算出来的结果是89.2%
+
 ```python
 def predict(theta, X):
     '''Predict label using learned logistic regression parameters'''
