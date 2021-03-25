@@ -10,6 +10,7 @@
 所谓的代价函数Cost Function，其实是一种衡量我们在这组参数下预估的结果和实际结果差距的函数，比如说线性回归的代价函数定义为:
 ![image](https://user-images.githubusercontent.com/39177230/112442759-26716880-8d87-11eb-83b5-1e036532cbf9.png)
 
+查看数据在空间的分布 
 ```python
 from numpy import loadtxt, where
 from pylab import scatter, show, legend, xlabel, ylabel
@@ -28,8 +29,77 @@ xlabel('Feature1/Exam 1 score')
 ylabel('Feature2/Exam 2 score')
 legend(['Fail', 'Pass'])
 show()
-[/code]
 
+```
+![image](https://user-images.githubusercontent.com/39177230/112443647-2b82e780-8d88-11eb-9201-e85bf4c0d7da.png)
+
+判定边界对training data做一个预测，然后比对一下准确率
+```python
+def predict(theta, X):
+    '''Predict label using learned logistic regression parameters'''
+    m, n = X.shape
+    p = zeros(shape=(m,1))
+    h = sigmoid(X.dot(theta.T))
+    for it in range(0, h.shape[0]):
+        if h[it]>0.5:
+            p[it,0]=1
+        else:
+            p[it,0]=0
+    return p
+#Compute accuracy on our training set
+p = predict(array(theta), it)
+print'Train Accuracy: %f'%((y[where(p == y)].size / float(y.size))*100.0)
+
+```
+写好计算sigmoid函数、代价函数、和梯度下降的程序
+```python
+ 
+ def sigmoid(X):
+    '''Compute sigmoid function '''
+    den =1.0+ e **(-1.0* X)
+    gz =1.0/ den
+    return gz
+def compute_cost(theta,X,y):
+    '''computes cost given predicted and actual values'''
+    m = X.shape[0]#number of training examples
+    theta = reshape(theta,(len(theta),1))
+    
+    J =(1./m)*(-transpose(y).dot(log(sigmoid(X.dot(theta))))- transpose(1-y).dot(log(1-sigmoid(X.dot(theta)))))
+    
+    grad = transpose((1./m)*transpose(sigmoid(X.dot(theta))- y).dot(X))
+    #optimize.fmin expects a single value, so cannot return grad
+    return J[0][0]#,grad
+def compute_grad(theta, X, y):
+    '''compute gradient'''
+    theta.shape =(1,3)
+    grad = zeros(3)
+    h = sigmoid(X.dot(theta.T))
+    delta = h - y
+    l = grad.size
+    for i in range(l):
+        sumdelta = delta.T.dot(X[:, i])
+        grad[i]=(1.0/ m)* sumdelta *-1
+    theta.shape =(3,)
+    return  grad
+```
+
+梯度下降算法得到的结果判定边界是如下的样子:
+![image](https://user-images.githubusercontent.com/39177230/112444153-b7950f00-8d88-11eb-9089-d9f8f89886cd.png)
+```python
+def predict(theta, X):
+    '''Predict label using learned logistic regression parameters'''
+    m, n = X.shape
+    p = zeros(shape=(m,1))
+    h = sigmoid(X.dot(theta.T))
+    for it in range(0, h.shape[0]):
+        if h[it]>0.5:
+            p[it,0]=1
+        else:
+            p[it,0]=0
+    return p
+#Compute accuracy on our training set
+p = predict(array(theta), it)
+print'Train Accuracy: %f'%((y[where(p == y)].size / float(y.size))*100.0)
 ```
 
 
