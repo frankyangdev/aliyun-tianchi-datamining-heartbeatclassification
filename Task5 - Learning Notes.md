@@ -1,65 +1,20 @@
 [Task 5 模型融合代码运行](https://github.com/frankyangdev/aliyun-tianchi-datamining-heartbeatclassification/blob/main/T5%20-%20HeartbeatClassification-Ensambling.ipynb)
 
-[sklearn.ensemble.RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
-
-```python
->>> from sklearn.ensemble import RandomForestRegressor
->>> from sklearn.datasets import make_regression
->>> X, y = make_regression(n_features=4, n_informative=2,
-...                        random_state=0, shuffle=False)
->>> regr = RandomForestRegressor(max_depth=2, random_state=0)
->>> regr.fit(X, y)
-RandomForestRegressor(...)
->>> print(regr.predict([[0, 0, 0, 0]]))
-[-8.32987858]
-
-```
-![image](https://user-images.githubusercontent.com/39177230/112706453-300de400-8edf-11eb-9306-90200134c5fa.png)
-
-
-[sklearn.neural_network.MLPRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html)
-
-```python
->>> from sklearn.neural_network import MLPRegressor
->>> from sklearn.datasets import make_regression
->>> from sklearn.model_selection import train_test_split
->>> X, y = make_regression(n_samples=200, random_state=1)
->>> X_train, X_test, y_train, y_test = train_test_split(X, y,
-...                                                     random_state=1)
->>> regr = MLPRegressor(random_state=1, max_iter=500).fit(X_train, y_train)
->>> regr.predict(X_test[:2])
-array([-0.9..., -7.1...])
->>> regr.score(X_test, y_test)
-0.4...
-```
-
-
-
-![image](https://user-images.githubusercontent.com/39177230/112706461-3c923c80-8edf-11eb-8524-6860c8663d5e.png)
-
-[sklearn.metrics.mean_absolute_error](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html)
-
-```python
->>> from sklearn.metrics import mean_absolute_error
->>> y_true = [3, -0.5, 2, 7]
->>> y_pred = [2.5, 0.0, 2, 8]
->>> mean_absolute_error(y_true, y_pred)
-0.5
->>> y_true = [[0.5, 1], [-1, 1], [7, -6]]
->>> y_pred = [[0, 2], [-1, 2], [8, -5]]
->>> mean_absolute_error(y_true, y_pred)
-0.75
->>> mean_absolute_error(y_true, y_pred, multioutput='raw_values')
-array([0.5, 1. ])
->>> mean_absolute_error(y_true, y_pred, multioutput=[0.3, 0.7])
-0.85...
-```
-
-![image](https://user-images.githubusercontent.com/39177230/112707558-4750cf80-8ee7-11eb-9dcc-519fe358e3c7.png)
-
 ### Voting
 
 假设对于一个二分类问题，有3个基础模型，那么就采取投票制的方法，投票多者确定为最终的分类。
+
+```python
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import RandomForestClassifier, VotingClassifier
+clf1 = LogisticRegression(random_state=1)
+clf2 = RandomForestClassifier(random_state=1)
+clf3 = GaussianNB()
+eclf = VotingClassifier(estimators=[('lr', clf1), ('rf', clf2), ('gnb', clf3)])
+eclf = eclf1.fit(x_train,y_train)
+print(eclf1.predict(x_test))
+```
 
 ### Averaging
 
@@ -78,6 +33,24 @@ Bagging就是采用有放回的方式进行抽样，用抽样的样本建立子�
 * 回归问题：average
 
 Bagging算法不用我们自己实现，随机森林就是基于Bagging算法的一个典型例子，采用的基分类器是决策树。R和python都集成好了，直接调用。
+
+随机森林实际上就是Bagging算法的进化版，不同于Bagging算法的是，Bagging产生不同数据集的方式只是对行利用有放回的随机抽样，而随机森林产生不同数据集的方式不仅对行随机抽样也对列进行随机抽样。
+
+[sklearn.ensemble.RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
+
+```python
+>>> from sklearn.ensemble import RandomForestRegressor
+>>> from sklearn.datasets import make_regression
+>>> X, y = make_regression(n_features=4, n_informative=2,
+...                        random_state=0, shuffle=False)
+>>> regr = RandomForestRegressor(max_depth=2, random_state=0)
+>>> regr.fit(X, y)
+RandomForestRegressor(...)
+>>> print(regr.predict([[0, 0, 0, 0]]))
+[-8.32987858]
+
+```
+![image](https://user-images.githubusercontent.com/39177230/112706453-300de400-8edf-11eb-9306-90200134c5fa.png)
 
 ### Boosting
 
@@ -159,6 +132,45 @@ Blending的优点在于：
 3.stacking使用多次的CV会比较稳健
 
 
+[sklearn.neural_network.MLPRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html)
+
+```python
+>>> from sklearn.neural_network import MLPRegressor
+>>> from sklearn.datasets import make_regression
+>>> from sklearn.model_selection import train_test_split
+>>> X, y = make_regression(n_samples=200, random_state=1)
+>>> X_train, X_test, y_train, y_test = train_test_split(X, y,
+...                                                     random_state=1)
+>>> regr = MLPRegressor(random_state=1, max_iter=500).fit(X_train, y_train)
+>>> regr.predict(X_test[:2])
+array([-0.9..., -7.1...])
+>>> regr.score(X_test, y_test)
+0.4...
+```
+
+
+
+![image](https://user-images.githubusercontent.com/39177230/112706461-3c923c80-8edf-11eb-8524-6860c8663d5e.png)
+
+[sklearn.metrics.mean_absolute_error](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html)
+
+```python
+>>> from sklearn.metrics import mean_absolute_error
+>>> y_true = [3, -0.5, 2, 7]
+>>> y_pred = [2.5, 0.0, 2, 8]
+>>> mean_absolute_error(y_true, y_pred)
+0.5
+>>> y_true = [[0.5, 1], [-1, 1], [7, -6]]
+>>> y_pred = [[0, 2], [-1, 2], [8, -5]]
+>>> mean_absolute_error(y_true, y_pred)
+0.75
+>>> mean_absolute_error(y_true, y_pred, multioutput='raw_values')
+array([0.5, 1. ])
+>>> mean_absolute_error(y_true, y_pred, multioutput=[0.3, 0.7])
+0.85...
+```
+
+![image](https://user-images.githubusercontent.com/39177230/112707558-4750cf80-8ee7-11eb-9dcc-519fe358e3c7.png)
 
 ### Ref:
 [模型融合在kaggle比赛中的几种常见应用](https://blog.csdn.net/sinat_26811377/article/details/98495425?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161681205016780266220058%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161681205016780266220058&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-5-98495425.first_rank_v2_pc_rank_v29&utm_term=%E6%A8%A1%E5%9E%8B%E8%9E%8D%E5%90%88%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F&spm=1018.2226.3001.4187)
