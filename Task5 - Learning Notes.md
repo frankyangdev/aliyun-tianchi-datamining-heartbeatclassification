@@ -130,12 +130,38 @@ def get_oof(clf, x_train, y_train, x_test):
  return oof_train.reshape(-1, 1), oof_test.reshape(-1, 1)  #转置，从一行变为一列
 ```
 
+### Blending
+
+* 将数据划分为训练集和测试集(test_set)，其中训练集需要再次划分为训练集(train_set)和验证集(val_set)；
+* 创建第一层的多个模型，这些模型可以使同质的也可以是异质的；
+* 使用train_set训练步骤2中的多个模型，然后用训练好的模型预测val_set和test_set得到val_predict, test_predict1；
+* 创建第二层的模型,使用val_predict作为训练集训练第二层的模型；
+* 使用第二层训练好的模型对第二层测试集test_predict1进行预测，该结果为整个测试集的结果
+
+![image](https://user-images.githubusercontent.com/39177230/112708018-5c7b2d80-8eea-11eb-978e-e191fa4cf297.png)
+
+
+### Blending与Stacking对比
+Blending的优点在于：
+
+1.比stacking简单（因为不用进行k次的交叉验证来获得stacker feature）
+
+2.避开了一个信息泄露问题：generlizers和stacker使用了不一样的数据集
+
+3.在团队建模过程中，不需要给队友分享自己的随机种子
+
+而缺点在于：
+
+1.使用了很少的数据（是划分hold-out作为测试集，并非cv）
+
+2.blender可能会过拟合（其实大概率是第一点导致的）
+
+3.stacking使用多次的CV会比较稳健
 
 
 
-
-
-
+### Ref:
+[模型融合在kaggle比赛中的几种常见应用](https://blog.csdn.net/sinat_26811377/article/details/98495425?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161681205016780266220058%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=161681205016780266220058&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-5-98495425.first_rank_v2_pc_rank_v29&utm_term=%E6%A8%A1%E5%9E%8B%E8%9E%8D%E5%90%88%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F&spm=1018.2226.3001.4187)
 
 [模型融合方法概述](https://blog.csdn.net/muyimo/article/details/80066449?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161681205016780269821374%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=161681205016780269821374&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-80066449.first_rank_v2_pc_rank_v29&utm_term=%E6%A8%A1%E5%9E%8B%E8%9E%8D%E5%90%88%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F&spm=1018.2226.3001.4187)
 
