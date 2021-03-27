@@ -1,8 +1,5 @@
 [sklearn.ensemble.RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html)
 
-![image](https://user-images.githubusercontent.com/39177230/112706453-300de400-8edf-11eb-9306-90200134c5fa.png)
-
-
 ```python
 >>> from sklearn.ensemble import RandomForestRegressor
 >>> from sklearn.datasets import make_regression
@@ -15,6 +12,7 @@ RandomForestRegressor(...)
 [-8.32987858]
 
 ```
+![image](https://user-images.githubusercontent.com/39177230/112706453-300de400-8edf-11eb-9306-90200134c5fa.png)
 
 
 [sklearn.neural_network.MLPRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html)
